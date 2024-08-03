@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Bosch;
+    src: url(./font/Bosch/Bosch.otf)
+}
+
+body{
+    font-family: Bosch;
+    background: #fff;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .section-img{
+width: 100%;
+height: 100vh;
+position: fixed;
+left: 0;
+top: 0;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+transition: 1000ms ease-in-out;
+pointer-events: none;
+} 
+
+nav{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 97%;
+margin: 0 auto;
+padding: 1em;
+color: #fff;
+mix-blend-mode: difference;
+position: relative;
+z-index: 4;
+}
+
+.nav-item{
+font-size: 2rem;
+text-transform: uppercase;
+}
+
+.container{
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: -60px;
+}
+
+.img-container{
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3rem;
+flex-wrap: wrap;
+position: relative;
+}
+.img-container img{
+width: 25rem;
+height: 40rem;
+cursor: pointer;
+}
+
+.marquee{
+padding-left: 5rem;
+white-space: nowrap;
+overflow: hidden;
+margin-top: -100px;
+}
+
+.marquee span{
+    display: inline-block;
+    font-size: 5rem;
+    margin-right: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    mix-blend-mode: difference;
+    animation: marquee-animation 80s infinite linear;
+    cursor: pointer;
+}
+
+.marquee:hover span{
+animation-play-state: paused;
+}
+
+@keyframes marquee-animation {
+    0%{transform: translate(0 ,0);}
+    100%{transform: translate(-100% ,0);}
+}
+
+.intro-container{
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100vh;
+background: #fff;
+z-index: 6;
+display: grid;
+place-content: center;
+}
+
+.loader{
+    width: 150px;
+    height: 10px;
+    border: 1px solid #000;
+    transform: rotate(-45deg);
+    position: relative;
+    overflow: hidden;
+}
+.loading{
+width: 0;
+height: 9px;
+background: #000;
+position: absolute;
+top: 0;
+left: 0;
+}
